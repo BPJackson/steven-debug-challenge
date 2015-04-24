@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>About me</title>
+        <link rel="stylesheet" type="text/css" href="dasstyle.css">
+                <script type="text/javascript" src="jquery.js"></script>
+                    <meta charset="utf-8">
+    </head>
+<body>
+    <div class="head"><h1>HELLO!</h1>
+        <h4>My name is Steve.</h4></div>
+    <img src="coolcat.jpg" id='coolcat' alt="Well, this is dissapointing:/">
+<!--this script when clicked makes the cat bigger then smaller-->
+<script type="text/javascript">
+$(document).ready(function()
+{
+   $('#coolcat').click(function()
+   {
+      $.data(this,"width", $(this).width())
+      $(this).animate({width:400}, 'slow');
+   });
+   $('#coolcat').click(function()
+   {
+      $(this).animate({width:$(this).data('width')}, 'slow');
+   });
+});
+</script>
+    <p>Hey all, my name is Steve. I like video games, music, movies and wierd comedy stuff. I was born in South Africa. I've lived in Illinois, California, Colorado and Verginia. I was in the Navy. </p>
+    <p>If you click the cat, it does something with Jquery.</p>
+    <div class='butto'><a href="page2.html">#dreamjournal</a></div>
+</body>
+</html>
